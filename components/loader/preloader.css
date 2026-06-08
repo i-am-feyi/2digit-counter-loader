@@ -1,0 +1,68 @@
+.preloader-container {
+  display: fixed;
+  height: 100svh;
+  width: 100%;
+}
+
+.loading-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 8px;
+  height: 100%;
+  transform-origin: left bottom;
+  background-color: #f1b434;
+  transform: scaleY(0);
+  will-change: transform;
+}
+
+.counter {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2.5rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.counter .number {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 6rem;
+}
+
+.counter .number .number-track {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+.number-1 .number-track {
+  transform: translateY(100%);
+}
+
+.number-2 .number-track,
+.number-3 .number-track {
+  transform: translateY(10%);
+}
+
+.counter .number .number-track span {
+  line-height: 1;
+  font-size: 6rem;
+  font-weight: 600;
+  height: 1em;
+  overflow: hidden;
+}
+
+.counter .percentage {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 2.125rem;
+  padding-top: 0.4rem;
+  transform: translateY(100);
+  will-change: transform;
+}
